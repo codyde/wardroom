@@ -1,0 +1,22 @@
+- name: Copy SSH Key
+  hosts: all
+  connection: ssh
+  gather_facts: yes
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+
+    - name: "Copy Key"
+      copy:
+        src: ~/.ssh/id_rsa.pub
+        dest: ~/.ssh/authorized_keys
+
+    - name: "Update APT Packages"
+      apt:
+        upgrade: yes
+        update_cache: yes
+
+    - name: Install PIP
+      apt:
+        name: python-pip
