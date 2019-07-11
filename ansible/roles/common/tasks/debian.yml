@@ -2,12 +2,15 @@
 - name: update apt cache
   apt:
     update_cache: True
-    cache_valid_time: 3600
-
+    
 - name: perform a dist-upgrade
   apt:
     upgrade: dist
   when: common_upgrade_base | bool
+
+- name: Install Python PIP
+  apt:
+    name: python-pip
 
 - name: install baseline dependencies
   apt:
