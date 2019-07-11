@@ -9,6 +9,14 @@
   tasks:
   - set_fact:
       wardroom_action: 'install'
+  - name: "Update APT Packages"
+      apt:
+        upgrade: yes
+        update_cache: yes
+
+  - name: Install PIP
+    apt:
+      name: python-pip
 
 - name: install test loadbalancer
   hosts: loadbalancer
