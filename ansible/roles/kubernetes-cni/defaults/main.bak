@@ -2,7 +2,7 @@
 kubernetes_cni_plugin: calico
 
 kubernetes_cni_calico_rbac_url: "https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/rbac-kdd.yaml"
-kubernetes_cni_calico_manifest_url: "https://docs.projectcalico.org/v3.8/manifests/calico.yaml"
+kubernetes_cni_calico_manifest_url: "https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml"
 kubernetes_cni_calico_install_calicoctl: False
 kubernetes_cni_calico_calicoctl_url: "https://github.com/projectcalico/calicoctl/releases/download/v3.4.0/calicoctl"
 kubernetes_cni_calico_manifest_mods: []

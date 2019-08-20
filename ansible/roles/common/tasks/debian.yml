@@ -8,10 +8,6 @@
     upgrade: dist
   when: common_upgrade_base | bool
 
-- name: Install Python PIP
-  apt:
-    name: python-pip
-
 - name: install baseline dependencies
   apt:
     name: "{{ common_debs }}"
